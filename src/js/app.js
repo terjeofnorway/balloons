@@ -1,5 +1,8 @@
 import Balloon from './Balloon';
+import Scenery from './Scenery';
+
 import Styles from '../styles/app.scss';
+
 
 class Application{
 
@@ -9,6 +12,7 @@ class Application{
         this.setCanvasSize();
 
         let balloon = new Balloon();
+        let scenery = new Scenery();
     }
 
     createCanvas(){
