@@ -1,0 +1,6 @@
+class Scenery{
+
+    constructor(){
+
+    }
+}
