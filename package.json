@@ -22,6 +22,6 @@
   "scripts": {
     "build:stage": "NODE_ENV=stage webpack --config webpack.config.js",
     "build:production": "NODE_ENV=production webpack --config webpack.config.js",
-    "watch": "webpack-dev-server --inline --hot"
+    "watch": "webpack-dev-server -d --hot --watch"
   }
 }

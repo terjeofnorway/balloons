@@ -1,5 +1,6 @@
 import Balloon from './Balloon';
-import Scenery from './Scenery';
+import SceneryController from './SceneryController';
+import AssetsController from './AssetsController';
 
 import Styles from '../styles/app.scss';
 
@@ -12,7 +13,8 @@ class Application{
         this.setCanvasSize();
 
         let balloon = new Balloon();
-        let scenery = new Scenery();
+        let assetController = new AssetsController();
+        let sceneryController = new SceneryController();
     }
 
     createCanvas(){
@@ -27,10 +29,11 @@ class Application{
 
         document.getElementById('gamecanvas').height = (height);
         document.getElementById('gamecanvas').width = (width);
-
     }
+}
 
-
+if (module.hot) {
+    module.hot.accept();
 }
 
 let application = new Application();

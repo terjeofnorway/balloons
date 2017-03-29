@@ -14,8 +14,12 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: './js/app.js',
     output: {
-        path: path.resolve(__dirname, 'dist/js'),
-        filename: 'app.js'
+        path: path.resolve(__dirname, 'dist'),
+        publicPath:'/dist/',
+        filename: 'app.js',
+        devtoolLineToLine: true,
+        sourceMapFilename: "app.js.map",
+        pathinfo: true
     },
     module: {
         rules: [
@@ -28,12 +32,12 @@ module.exports = {
             },
             {
                 test: /\.(svg|jpg|gif)$/,
-                use: 'url-loader?limit=1000!name=[name].[ext]&outputPath=../images/',
+                use: 'url-loader?limit=10&name=[name].[ext]&outputPath=images/',
                 exclude: /fonts/
             },
             {
                 test: /\.(eot|ttf|woff|woff2|svg)$/,
-                use: 'file-loader?name=[name].[ext]&outputPath=../fonts/',
+                use: 'file-loader?name=[name].[ext]&outputPath=fonts/',
                 exclude: /images/
             }]
     },
@@ -41,7 +45,7 @@ module.exports = {
         new CleanWebpackPlugin(['dist', 'build'], {
             root: path.resolve(__dirname),
             verbose: true,
-            dry: false,
+            dry: !isProd,
             exclude: ['shared.js']
         }),
         new ExtractTextPlugin({filename: '../styles/app.css', disable: !isProd}),
