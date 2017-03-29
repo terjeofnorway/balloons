@@ -16,10 +16,13 @@ class AssetsController{
     loadAssets(){
         for (let asset of this.assetLibrary){
             asset.promise = fetch(asset.url);
-            asset.promise.then(item => item.blob()).then(item => {
-
-            });
         }
+
+        Promise.all(this.assetLibrary.map(item => item.promise))
+            .then(resultArray => {
+                let allAssetsLoaded = resultArray.every(item => {return item.ok === true});
+                //TODO: Add event handler for broadcasting load event of assets.
+            });
     }
 
     getFileByHandle(handle){
