@@ -1,11 +1,16 @@
+import CanvasController from './controllers/CanvasController';
+
 class Sky{
 
     constructor(){
 
     }
 
-    draw(){
-        let canvasContent = document.getElementById('gamecanvas').getContext('2d'),
+    /** Draw the sky background as a gradient
+     * @return void
+     */
+    dispatchDrawRequestEvent(){
+        let canvasContent = CanvasController.canvasContext,
             height = window.innerHeight,
             width = window.innerWidth,
             gradient = canvasContent.createLinearGradient(0, 0, width, height);
@@ -19,8 +24,7 @@ class Sky{
 
 
     tick(){
-        this.draw();
-
+        this.dispatchDrawRequestEvent();
     }
 
 }

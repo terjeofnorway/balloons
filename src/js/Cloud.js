@@ -1,14 +1,30 @@
-class Cloud{
+import Drawable from './core/Drawable';
+
+class Cloud extends Drawable{
     constructor(){
-        this.cloudAssets = ['cloud1.svg', 'cloud2.svg', 'cloud3.svg', 'cloud4.svg'];
-        this.cloudGraphic = Math.random()
+        super();
+
+        this.inflate();
     }
 
-    draw(){
+    inflate(){
+        let asset = window.application.assetController.getAsset('cloud');
+        this.graphic = new Image();
+        this.graphic.src = asset.url;
+        this.size = [100,100];
+    }
+
+    dispatchDrawRequestEvent(){
+        window.dispatchEvent(new Event(Drawable.DRAW_REQUEST_EVENT));
+
+
 
     }
 
     tick(){
-        draw();
+        //1. Move object one single tick
+        this.dispatchDrawRequestEvent();
     }
 }
+
+export default Cloud;

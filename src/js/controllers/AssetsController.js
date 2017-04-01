@@ -1,4 +1,4 @@
-const images = require.context('../images/', true);
+const images = require.context('../../images/', true);
 
 class AssetsController{
     constructor(){
@@ -21,12 +21,16 @@ class AssetsController{
         Promise.all(this.assetLibrary.map(item => item.promise))
             .then(resultArray => {
                 let allAssetsLoaded = resultArray.every(item => {return item.ok === true});
-                //TODO: Add event handler for broadcasting load event of assets.
+                window.dispatchEvent(new Event('ASSETS_LOADED'));
             });
     }
 
     getFileByHandle(handle){
         return this.assetLibrary.find(item => item.handle === handle);
+    }
+
+    getAsset(type){
+        return this.assetLibrary[0];
     }
 }
 

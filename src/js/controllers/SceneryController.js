@@ -1,4 +1,6 @@
-import Sky from './Sky';
+import Sky from '../Sky';
+import Cloud from '../Cloud';
+
 
 class Scenery{
 
@@ -6,24 +8,20 @@ class Scenery{
         this.drawLibrary = [];
 
         this.createSky();
-
-        this.tick();
+        this.createClouds();
 
     }
 
     createSky(){
         let sky = new Sky();
-
         this.drawLibrary.push(sky);
     }
 
-
-    tick(){
-        for(let item of this.drawLibrary){
-            item.tick();
-        }
-
+    createClouds(){
+        let  cloud = new Cloud();
+        this.drawLibrary.push(cloud);
     }
+
 }
 
 

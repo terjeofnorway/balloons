@@ -1,6 +1,8 @@
 import Balloon from './Balloon';
-import SceneryController from './SceneryController';
-import AssetsController from './AssetsController';
+import SceneryController from './controllers/SceneryController';
+import AssetsController from './controllers/AssetsController';
+import CanvasController from './controllers/CanvasController';
+
 
 import Styles from '../styles/app.scss';
 
@@ -9,26 +11,29 @@ class Application{
 
     constructor(){
 
-        this.createCanvas();
-        this.setCanvasSize();
+        // Load the assets before continuing to set up the game
+        // when all assets are loaded, the ASSETS_LOADED event gets fired from
+        // the AssetsController
+        this.assetController = new AssetsController();
+        window.addEventListener('ASSETS_LOADED', this.initGame.bind(this));
+    }
 
-        let balloon = new Balloon();
-        let assetController = new AssetsController();
+
+    /** Knowing that all assets are not loaded and available,
+     * start setting up the canvas as well as instances of the
+     * assets.
+     */
+    initGame(){
+        this.gameCanvas = new CanvasController()
+        this.gameCanvas.createCanvas();
+
         let sceneryController = new SceneryController();
+
+        this.tick();
     }
 
-    createCanvas(){
-        let canvas = document.createElement('canvas');
-        canvas.setAttribute('id', 'gamecanvas');
-        document.getElementsByTagName('body')[0].appendChild(canvas);
-    }
-
-    setCanvasSize(){
-        let height = window.innerHeight;
-        let width = window.innerWidth;
-
-        document.getElementById('gamecanvas').height = (height);
-        document.getElementById('gamecanvas').width = (width);
+    tick(){
+        window.dispatchEvent(new Event('TICK'));
     }
 }
 
@@ -36,4 +41,4 @@ if (module.hot) {
     module.hot.accept();
 }
 
-let application = new Application();
+window.application = new Application();
