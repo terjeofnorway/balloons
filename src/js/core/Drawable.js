@@ -1,42 +1,48 @@
+import Vector from './Vector';
+
 class Drawable {
 
-    constructor(){
-        this.velocity = [0,0];
+    constructor(initX, initY) {
+        this.vector = new Vector();
+        this.vector.position = [initX, initY];
         this.graphic = '';
-        this.size = [0,0];
+        this.size = [0, 0];
 
         window.addEventListener('TICK', this.tick.bind(this));
     }
 
-    getDrawableOBject(){
+    getDrawableObject() {
         let drw = {
-            graphic:this.graphic,
-            size:this.size,
-            velocity: this.velocity
+            graphic: this.graphic,
+            size: this.size,
+            vector: this.vector
         }
 
         return drw;
     }
 
-    inflate(){
+    inflate() {
 
+    }
+
+    updatePosition() {
+        this.vector.update();
     }
 
     /** Creates a universally drawable object that is
      * then dispatched as an event
      */
-    dispatchDrawRequestEvent(){
-        //this  drawObject = this.getDrawableObject();
+    dispatchDrawRequestEvent() {
+        window.dispatchEvent(new CustomEvent(Drawable.DRAW_REQUEST_EVENT, {detail: this.getDrawableObject()}));
     }
 
-    tick(){
+    tick() {
+        this.updatePosition();
         this.dispatchDrawRequestEvent();
-
     }
 }
 
 Drawable.DRAW_REQUEST_EVENT = 'DRAW_REQUEST_EVENT';
-
 
 
 export default Drawable;

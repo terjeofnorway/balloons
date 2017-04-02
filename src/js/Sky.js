@@ -1,8 +1,10 @@
 import CanvasController from './controllers/CanvasController';
+import Drawable from './core/Drawable';
 
-class Sky{
+class Sky extends Drawable{
 
     constructor(){
+        super();
 
     }
 

@@ -3,11 +3,11 @@ const images = require.context('../../images/', true);
 class AssetsController{
     constructor(){
         this.assetLibrary = [
-            {handle:'cloud1',url:'images/cloud1.svg',type:'svg'},
-            {handle:'cloud2',url:'images/cloud2.svg',type:'svg'},
-            {handle:'cloud3',url:'images/cloud3.svg',type:'svg'},
-            {handle:'cloud4',url:'images/cloud4.svg',type:'svg'},
-        ]
+            {handle:'cloud1',url:'images/cloud1.svg',type:'cloud', size:[132,32]},
+            {handle:'cloud2',url:'images/cloud2.svg',type:'cloud', size:[109,39]},
+            {handle:'cloud3',url:'images/cloud3.svg',type:'cloud', size:[101,27]},
+            {handle:'cloud4',url:'images/cloud4.svg',type:'cloud', size:[80,23]},
+        ];
 
         this.loadAssets();
     }
@@ -20,9 +20,22 @@ class AssetsController{
 
         Promise.all(this.assetLibrary.map(item => item.promise))
             .then(resultArray => {
-                let allAssetsLoaded = resultArray.every(item => {return item.ok === true});
+
+                let blogPromiseArray = resultArray.map(item => { return item.blob() });
+
+                return Promise.all(blogPromiseArray);
+            })
+            .then(blogPromiseArray => {
+
+                blogPromiseArray.map((item,index) => {
+                    let assetImage = new Image();
+                    assetImage.src = URL.createObjectURL(item);
+                    this.assetLibrary[index].graphic = assetImage;
+                });
+
                 window.dispatchEvent(new Event('ASSETS_LOADED'));
             });
+
     }
 
     getFileByHandle(handle){
@@ -30,7 +43,11 @@ class AssetsController{
     }
 
     getAsset(type){
-        return this.assetLibrary[0];
+
+        const assetSelection = this.assetLibrary.filter(item => item.type === type);
+
+
+        return assetSelection[Math.floor(Math.random() * assetSelection.length)];
     }
 }
 

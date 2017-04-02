@@ -24,11 +24,18 @@ class CanvasController{
     }
 
     drawRequestEventHandler(e){
-        console.log('i am CanvasController - got this event: ', e);
+        let canvasContext = CanvasController.canvasContext;
+        let drawImage = e.detail.graphic;
+
+        canvasContext.drawImage(drawImage,e.detail.vector.position.x,e.detail.vector.position.y,e.detail.size[0],e.detail.size[1]);
     }
 
     static get canvasContext(){
         return document.getElementById('gamecanvas').getContext('2d');
+    }
+
+    static get canvasSize(){
+        return [document.getElementById('gamecanvas').height, document.getElementById('gamecanvas').width];
     }
 }
 
