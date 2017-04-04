@@ -26,6 +26,13 @@ class CanvasController{
     drawRequestEventHandler(e){
         let canvasContext = CanvasController.canvasContext;
         let drawImage = e.detail.graphic;
+        let origin = e.detail.origin;
+
+
+        //Check if object is out of canvas. Send event to object, then draw object anyway.
+        if(e.detail.vector.position.x > CanvasController.canvasSize[0] || e.detail.vector.position.y > CanvasController.canvasSize[1]){
+            origin.dispatchEvent(new Event(Drawable.OUT_OF_BOUNDS));
+        }
 
         canvasContext.drawImage(drawImage,e.detail.vector.position.x,e.detail.vector.position.y,e.detail.size[0],e.detail.size[1]);
     }
@@ -35,7 +42,7 @@ class CanvasController{
     }
 
     static get canvasSize(){
-        return [document.getElementById('gamecanvas').height, document.getElementById('gamecanvas').width];
+        return [document.getElementById('gamecanvas').width, document.getElementById('gamecanvas').height];
     }
 }
 

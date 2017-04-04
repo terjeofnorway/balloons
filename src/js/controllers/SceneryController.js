@@ -1,7 +1,7 @@
 import Sky from '../Sky';
 import Cloud from '../Cloud';
 import CanvasController from './CanvasController';
-
+import Vector from '../core/Vector';
 
 class Scenery{
 
@@ -17,8 +17,12 @@ class Scenery{
 
     createClouds(){
 
-        for(let c = 0 ; c < 4 ; c++){
-            let  cloud = new Cloud(Math.random() * CanvasController.canvasSize[0], (Math.random() * CanvasController.canvasSize[1] / 2));
+        for(let c = 0 ; c < 8 ; c++){
+            const vector = new Vector();
+            vector.position = [Math.random() * CanvasController.canvasSize[0], (Math.random() * CanvasController.canvasSize[1] / 3)];
+            vector.speed = [Math.random() * 3, 0];
+
+            const cloud = new Cloud(vector);
         }
     }
 

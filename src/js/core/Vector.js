@@ -26,6 +26,11 @@ class Vector{
     }
 
 
+    resetPositionX(pos){
+        this.x = pos;
+    }
+
+
 }
 
 export default Vector;

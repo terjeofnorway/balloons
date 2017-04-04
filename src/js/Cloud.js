@@ -1,19 +1,21 @@
 import Drawable from './core/Drawable';
 
 class Cloud extends Drawable{
-    constructor(initX = 0, initY = 0){
-        super(initX, initY);
-
-        console.log(initX, initY);
+    constructor(vector = new Vector()){
+        super(vector);
 
         this.inflate();
+    }
+
+    outOfBoundsEventHandler(){
+        console.log('i am out of bounds');
+        this.vector.resetPositionX(this.size[0] * -1);
     }
 
     inflate(){
         let asset = window.application.assetController.getAsset('cloud');
         this.graphic = asset.graphic;
-        this.size = asset.size;
-        this.vector.speed = [1,0];
+        this.size = [asset.size[0] * 1.5,asset.size[1] * 1.5];
     }
 
 }

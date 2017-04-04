@@ -35,7 +35,7 @@ class Application{
     tick(){
         window.dispatchEvent(new Event('TICK'));
 
-        setTimeout(this.tick.bind(this),1000);
+        setTimeout(this.tick.bind(this),200);
     }
 }
 
