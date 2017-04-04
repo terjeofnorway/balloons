@@ -1,5 +1,6 @@
 import Sky from '../Sky';
 import Cloud from '../Cloud';
+import Ground from '../Ground';
 import CanvasController from './CanvasController';
 import Vector from '../core/Vector';
 
@@ -9,6 +10,7 @@ class Scenery{
 
         this.createSky();
         this.createClouds();
+        this.createGround();
     }
 
     createSky(){
@@ -24,6 +26,10 @@ class Scenery{
 
             const cloud = new Cloud(vector);
         }
+    }
+
+    createGround(){
+        let ground = new Ground();
     }
 
 }

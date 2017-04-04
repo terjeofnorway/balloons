@@ -7,6 +7,7 @@ class AssetsController{
             {handle:'cloud2',url:'images/cloud2.svg',type:'cloud', size:[109,39]},
             {handle:'cloud3',url:'images/cloud3.svg',type:'cloud', size:[101,27]},
             {handle:'cloud4',url:'images/cloud4.svg',type:'cloud', size:[80,23]},
+            {handle:'ground',url:'images/ground.svg',type:'ground', size:[1473,84]},
         ];
 
         this.loadAssets();
