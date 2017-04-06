@@ -2,7 +2,7 @@ import Balloon from './Balloon';
 import SceneryController from './controllers/SceneryController';
 import AssetsController from './controllers/AssetsController';
 import CanvasController from './controllers/CanvasController';
-
+import ArcherController from './controllers/ArcherController';
 
 import Styles from '../styles/app.scss';
 
@@ -27,7 +27,8 @@ class Application{
         this.gameCanvas = new CanvasController()
         this.gameCanvas.createCanvas();
 
-        let sceneryController = new SceneryController();
+        const sceneryController = new SceneryController();
+        const archerController = new ArcherController();
 
         this.tick();
     }

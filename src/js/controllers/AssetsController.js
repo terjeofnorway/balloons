@@ -13,7 +13,10 @@ class AssetsController{
             {handle:'tree3',url:'images/tree3.svg',type:'tree', size:[98,125]},
             {handle:'tree4',url:'images/tree4.svg',type:'tree', size:[46,82]},
             {handle:'tree5',url:'images/tree5.svg',type:'tree', size:[103,132]},
-            {handle:'tree6',url:'images/tree6.svg',type:'tree', size:[71,104]}
+            {handle:'tree6',url:'images/tree6.svg',type:'tree', size:[71,104]},
+            {handle:'archer_lower',url:'images/archer_lower.svg',type:'archer_lower', size:[53,58]},
+            {handle:'archer_middle',url:'images/archer_middle.svg',type:'archer_middle', size:[26,30]},
+            {handle:'archer_upper',url:'images/archer_upper.svg',type:'archer_upper', size:[73,65]},
         ];
 
         this.loadAssets();
