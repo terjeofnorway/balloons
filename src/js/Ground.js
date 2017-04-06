@@ -17,9 +17,7 @@ class Ground extends Drawable{
         let asset = window.application.assetController.getAsset('ground');
         this.graphic = asset.graphic;
         this.size = asset.size;
-        this.vector.position = [0,CanvasController.canvasSize[1] - this.size[1]]
-
-
+        this.vector.position = [0,CanvasController.canvasSize[1] - this.size[1]];
     }
 
 }

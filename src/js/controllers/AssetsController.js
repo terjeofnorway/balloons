@@ -8,6 +8,12 @@ class AssetsController{
             {handle:'cloud3',url:'images/cloud3.svg',type:'cloud', size:[101,27]},
             {handle:'cloud4',url:'images/cloud4.svg',type:'cloud', size:[80,23]},
             {handle:'ground',url:'images/ground.svg',type:'ground', size:[1473,84]},
+            {handle:'tree1',url:'images/tree1.svg',type:'tree', size:[90,154]},
+            {handle:'tree2',url:'images/tree2.svg',type:'tree', size:[101,179]},
+            {handle:'tree3',url:'images/tree3.svg',type:'tree', size:[98,125]},
+            {handle:'tree4',url:'images/tree4.svg',type:'tree', size:[46,82]},
+            {handle:'tree5',url:'images/tree5.svg',type:'tree', size:[103,132]},
+            {handle:'tree6',url:'images/tree6.svg',type:'tree', size:[71,104]}
         ];
 
         this.loadAssets();

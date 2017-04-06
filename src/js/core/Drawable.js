@@ -43,6 +43,14 @@ class Drawable extends Image{
 
     }
 
+    set position(v){
+        this.vector.position = v;
+    }
+
+    set speed(s){
+        this.vector.speed = s;
+    }
+
     tick() {
         this.updatePosition();
         this.dispatchDrawRequestEvent();

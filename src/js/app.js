@@ -39,8 +39,5 @@ class Application{
     }
 }
 
-if (module.hot) {
-    module.hot.accept();
-}
 
 window.application = new Application();
