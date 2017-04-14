@@ -8,6 +8,7 @@ class Drawable extends Image{
         this.vector = vector;
         this.graphic = '';
         this.size = [0, 0];
+        this.localCenter = [0,0];
 
         window.addEventListener('TICK', this.tick.bind(this));
         this.addEventListener(Drawable.OUT_OF_BOUNDS, this.outOfBoundsEventHandler.bind(this));
@@ -17,6 +18,7 @@ class Drawable extends Image{
         let drw = {
             graphic: this.graphic,
             size: this.size,
+            localCenter: this.localCenter,
             vector: this.vector,
             origin: this
         }

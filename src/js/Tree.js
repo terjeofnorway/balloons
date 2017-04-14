@@ -15,7 +15,7 @@ class Tree extends Drawable{
     inflate(){
         let asset = window.application.assetController.getAsset('tree');
         this.graphic = asset.graphic;
-        this.size = [asset.size[0] * 2.5,asset.size[1] * 2.5];
+        this.size = [asset.size[0],asset.size[1]];
 
     }
 

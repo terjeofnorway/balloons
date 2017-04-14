@@ -15,7 +15,7 @@ class Cloud extends Drawable{
     inflate(){
         let asset = window.application.assetController.getAsset('cloud');
         this.graphic = asset.graphic;
-        this.size = [asset.size[0] * 2.5,asset.size[1] * 2.5];
+        this.size = [asset.size[0],asset.size[1]];
 
     }
 
