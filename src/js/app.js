@@ -3,6 +3,7 @@ import SceneryController from './controllers/SceneryController';
 import AssetsController from './controllers/AssetsController';
 import CanvasController from './controllers/CanvasController';
 import ArcherController from './controllers/ArcherController';
+import ArrowController from './controllers/ArrowController';
 
 import Styles from '../styles/app.scss';
 
@@ -29,6 +30,7 @@ class Application{
 
         const sceneryController = new SceneryController();
         const archerController = new ArcherController();
+        const arrowController = new ArrowController();
 
         this.tick();
     }

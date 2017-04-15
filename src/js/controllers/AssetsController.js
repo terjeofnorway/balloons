@@ -17,6 +17,8 @@ class AssetsController{
             {handle:'archer_lower',url:'images/archer_lower.svg',type:'archer_lower', size:[132,145], translate:[65,20]},
             {handle:'archer_middle',url:'images/archer_middle.svg',type:'archer_middle', size:[65,75], translate:[32,37]},
             {handle:'archer_upper',url:'images/archer_upper.svg',type:'archer_upper', size:[182,162], translate:[50,90]},
+            {handle:'arrow',url:'images/arrow.svg',type:'arrow', size:[100,10], translate:[50,5]},
+
         ];
 
         this.loadAssets();

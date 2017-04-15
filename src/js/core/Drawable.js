@@ -7,6 +7,7 @@ class Drawable extends Image{
         super();
         this.vector = vector;
         this.graphic = '';
+        this.gravity = 0;
         this.size = [0, 0];
         this.localCenter = [0,0];
 

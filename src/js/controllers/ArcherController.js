@@ -67,7 +67,8 @@ class ArcherController {
     }
 
     releaseBow(){
-
+        const releaseEvent = new CustomEvent(ArcherController.AROW_RELEASE, {detail:{aim:this.aim}});
+        window.dispatchEvent(releaseEvent);
     }
 
 
@@ -91,6 +92,9 @@ class ArcherController {
         }
     }
 }
+
+
+ArcherController.AROW_RELEASE = 'ARROW_RELEASE';
 
 
 export default ArcherController;
