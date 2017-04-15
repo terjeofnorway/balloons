@@ -19,6 +19,8 @@ class ArcherPart extends Drawable{
         this.size = [asset.size[0],asset.size[1]];
         this.localCenter = asset.translate;
 
+        this.vector.rotationIsManual = true;
+
     }
 
 }

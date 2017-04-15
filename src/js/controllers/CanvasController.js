@@ -39,11 +39,11 @@ class CanvasController{
             //drawImage = e.detail.graphic;
 
         //Check if object is out of canvas. Send event to object, then draw object anyway.
-        if(e.detail.vector.position.x > CanvasController.canvasSize[0] || e.detail.vector.position.y > CanvasController.canvasSize[1]){
+        if(e.detail.vector.position._x > CanvasController.canvasSize[0] || e.detail.vector.position._y > CanvasController.canvasSize[1]){
             origin.dispatchEvent(new Event(Drawable.OUT_OF_BOUNDS));
         }
 
-        canvasContext.drawImage(drawImage,e.detail.vector.position.x,e.detail.vector.position.y,e.detail.size[0],e.detail.size[1]);
+        canvasContext.drawImage(drawImage,e.detail.vector.position._x,e.detail.vector.position._y,e.detail.size[0],e.detail.size[1]);
     }
 
     rotateAndCache(image, size, localCenter, angle) {

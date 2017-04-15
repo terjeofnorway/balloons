@@ -14,7 +14,7 @@ class ArrowController{
         const arrow = new Arrow();
         arrow.setAim(aim);
         arrow.vector.position = [10,400];
-
+        arrow.vector.gravity = 1;
     }
 
 

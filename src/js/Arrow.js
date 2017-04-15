@@ -4,7 +4,7 @@ class Arrow extends Drawable{
     constructor(){
         super();
 
-        this.gravity = .5;
+        this._gravity = .5;
         this.inflate();
     }
 
@@ -28,9 +28,6 @@ class Arrow extends Drawable{
 
     }
 
-    update(){
-
-    }
 
 }
 

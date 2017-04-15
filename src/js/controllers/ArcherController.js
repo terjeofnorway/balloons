@@ -81,7 +81,7 @@ class ArcherController {
                 this.updateAim(1);
                 break;
             case ' ':
-                this.updateAim(0,1);
+                this.updateAim(0,3);
         }
     }
 

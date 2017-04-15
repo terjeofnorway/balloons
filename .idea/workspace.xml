@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/js/core/Vector.js" line="86" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1de5a4d8-f796-41f0-8264-eeec5bb78847" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/archer_middle.svg" afterPath="$PROJECT_DIR$/src/images/archer_middle.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/archer_upper.svg" afterPath="$PROJECT_DIR$/src/images/archer_upper.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/ArcherPart.js" afterPath="$PROJECT_DIR$/src/js/ArcherPart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Arrow.js" afterPath="$PROJECT_DIR$/src/js/Arrow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/ArcherController.js" afterPath="$PROJECT_DIR$/src/js/controllers/ArcherController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/AssetsController.js" afterPath="$PROJECT_DIR$/src/js/controllers/AssetsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/ArrowController.js" afterPath="$PROJECT_DIR$/src/js/controllers/ArrowController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/CanvasController.js" afterPath="$PROJECT_DIR$/src/js/controllers/CanvasController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/core/Drawable.js" afterPath="$PROJECT_DIR$/src/js/core/Drawable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/core/Vector.js" afterPath="$PROJECT_DIR$/src/js/core/Vector.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +35,8 @@
       <file leaf-file-name="Drawable.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/core/Drawable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+            <state relative-caret-position="245">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -89,8 +93,8 @@
       <file leaf-file-name="ArcherPart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/ArcherPart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="315">
+              <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -101,8 +105,8 @@
       <file leaf-file-name="ArcherController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/controllers/ArcherController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="70" column="43" lean-forward="true" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+            <state relative-caret-position="312">
+              <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -113,30 +117,28 @@
       <file leaf-file-name="ArrowController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/controllers/ArrowController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Arrow.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/Arrow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+            <state relative-caret-position="0">
+              <caret line="0" column="50" lean-forward="true" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vector.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Arrow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/Arrow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/core/Vector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="39" column="93" lean-forward="false" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -178,18 +180,18 @@
         <option value="$PROJECT_DIR$/src/js/Ground.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/SceneryController.js" />
         <option value="$PROJECT_DIR$/src/js/Archer.js" />
-        <option value="$PROJECT_DIR$/src/js/ArcherPart.js" />
         <option value="$PROJECT_DIR$/src/js/Cloud.js" />
         <option value="$PROJECT_DIR$/src/js/Tree.js" />
         <option value="$PROJECT_DIR$/src/images/tree1.svg" />
         <option value="$PROJECT_DIR$/src/js/controllers/CanvasController.js" />
-        <option value="$PROJECT_DIR$/src/js/core/Vector.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/AssetsController.js" />
         <option value="$PROJECT_DIR$/src/js/app.js" />
-        <option value="$PROJECT_DIR$/src/js/controllers/ArcherController.js" />
         <option value="$PROJECT_DIR$/src/js/core/Drawable.js" />
-        <option value="$PROJECT_DIR$/src/js/controllers/ArrowController.js" />
         <option value="$PROJECT_DIR$/src/js/Arrow.js" />
+        <option value="$PROJECT_DIR$/src/js/controllers/ArrowController.js" />
+        <option value="$PROJECT_DIR$/src/js/controllers/ArcherController.js" />
+        <option value="$PROJECT_DIR$/src/js/ArcherPart.js" />
+        <option value="$PROJECT_DIR$/src/js/core/Vector.js" />
       </list>
     </option>
   </component>
@@ -473,12 +475,12 @@
       <updated>1490524886452</updated>
       <workItem from="1490524889977" duration="53119000" />
       <workItem from="1492072303215" duration="72000" />
-      <workItem from="1492077245926" duration="17680000" />
+      <workItem from="1492077245926" duration="22157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70871000" />
+    <option name="totallyTimeSpent" value="75348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1680" height="981" extended-state="6" />
@@ -513,7 +515,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -799,14 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/core/Vector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/controllers/AssetsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -825,16 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/ArcherPart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -845,40 +831,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/Arrow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/core/Drawable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="245">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/controllers/ArrowController.js">
+    <entry file="file://$PROJECT_DIR$/src/js/ArcherPart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/controllers/ArcherController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="70" column="43" lean-forward="true" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+        <state relative-caret-position="315">
+          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/Arrow.js">
+    <entry file="file://$PROJECT_DIR$/src/js/controllers/ArrowController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="50" lean-forward="true" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/controllers/ArcherController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/core/Vector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="39" column="93" lean-forward="false" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
           <folding />
         </state>
       </provider>
